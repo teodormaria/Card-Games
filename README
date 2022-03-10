@@ -1,0 +1,33 @@
+315CD - Maria Teodor
+
+                Tema 1 SD - jocuri cu carti
+
+Amestecari: Am creat o structura numita card care sa retina informatiile fiecarei 
+carti si creez pachetul de carti astfel incat prima carte va fi A. Pentru inversare
+mut fiecare nod(carte) din pachet intr-un pachet auxiliar, iar pt npiles folosesc 
+ca buffer un vector de liste, la fel ca si la intercalare, unde inserez la inceput
+sau la final cu functiile insertEndNode si insertFrontNode. Pentru Mongean distrug
+pachetul initial si adaug in rezultat la inceput sau la final.
+
+Razboi: am rezolvat problema cu o functie recursiva care se apeleaza pe sine pentru a 
+putea contoriva printr-o variabila nr de runde care au trecut. Fiind de tip void, 
+se va termina doar in momentul in care este scris ceva in fisierul de output. Functia 
+nrCarti determina cate carti sunt puse jos in cazul in care este remiza. Functia 
+winnerchar este apelata in care jocul ajunge la 100 de runde si determina castigatorul, 
+cat si cartea care da victoria. Am lucrat cu un vector de 2 elemente de liste pentru 
+pachetele din mana celor 2 jucatori.
+
+Rolling Stone: Am facut o noua structura de lista de liste numita colorlist 
+pentru a putea sorta cartile dupa culori. Deci fiecare jucator va avea un element 
+al unui vector de liste circulare de liste. Functia movetonextcolor face toti 
+jucatorii sa se uite la urmatoarea culoare. Fiecare runda este simulata de functia 
+rollinground, in care se pun carti pe masa pana cand cineva nu mai poate sau 
+cineva a ramas fara nicio carte si a castigat. Functia isWinner determina daca 
+exista vreun jucator de la 1 la 4 care a ramas fara carti, iar daca nu exista 
+returneaza 0. Functia rollinground returneaza persoana care a luat cartile de pe 
+masa pt ca acea persoana va incepe urmatoarea tura a jocului.
+
+Scarabeii Egipteni: Am facut o noua structura, playercards, o lista dublu inlantuita 
+de liste, pentru a putea controla mai usor sensul jocului. In functia scarabei, 
+de fiecare data cand un jucator pierde este eliminat din lista dublu inlantuita, 
+iar conditia de a terminare a jocului este ca in joc sa ramana un singur jucator.
